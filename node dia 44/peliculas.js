@@ -1,17 +1,17 @@
 module.exports = class Movie {
-    // title;
-    // releaseYear;
-    // actors;
-    // nationality
-    // director;
-    // writer;
-    // language;
-    // plataform;
-    // isMCU;
-    // mainCharacterName;
-    // producer;
-    // distributor;
-    // genre;
+    title;
+    releaseYear;
+    actors;
+    nationality
+    director;
+    writer;
+    language;
+    plataform;
+    isMCU;
+    mainCharacterName;
+    producer;
+    distributor;
+    genre;
     
      
     

@@ -25,7 +25,7 @@ var peliculas = [];
 var pelicula = new Movie("Ovejas asesinas", 2002, "Spain", "Terror");
 
 pelicula.actors = [];
-pelicula.director = null;
+pelicula.director = Object;
 pelicula.writer = "Armando Armado";
 pelicula.language = "Spanish";
 pelicula.plataform = "Netflix";
@@ -33,7 +33,7 @@ pelicula.isMCU = true;
 pelicula.mainCharacterName = "Martin Cabrales";
 pelicula.producer = "Jordi ENP";
 pelicula.distributor = "Mis Cojo...";
-pelicula.guionista = null;
+pelicula.guionista = Object;
 
 
 
@@ -52,7 +52,7 @@ app.get("/peliculas", function(request,response){
 
 
 
-app.get("/peliculas/actors", function(request,response){
+app.get("/peliculas/1actor", function(request,response){
 
     if (pelicula.actors[request.body.id] > actors.length){
                 response.send("Pelicula no encontrada")
@@ -67,22 +67,12 @@ app.post("/peliculas/director", function(request,response){
      request.body.age,request.body.isRetired,
      request.body.nationality,
      request.body.oscarsNumber)
-     // request.body.profession)
-     // request.body.genre,
-     // request.body.weight,
-     // request.body.height,
-     // request.body.hairColor,
-     // request.body.eyeColor,
-     // request.body.race,
-     // request.body.isRetired,
-     // request.body.nationality,
-     // request.body.oscarsNumber,
-     // request.body.profession)
+    
 
      pelicula.director = director1;
 
      response.send("Director creado");
-
+    
 
 })
 app.get("/peliculas/director", function(request,response){
@@ -139,11 +129,7 @@ app.delete("/peliculas", function(request, response){
 });
 
 
-// app.put("/peliculas/director",function(request,response){
-//     pelicula[request.body].director = request.body.director;
-//     response.send(pelicula)
 
-// });
 
 app.get("/peliculas/guionista", function(request,response){
     response.send(pelicula.guionista)
@@ -156,17 +142,7 @@ app.post("/peliculas/actors", function(request,response){
      request.body.age,request.body.isRetired,
      request.body.nationality,
      request.body.oscarsNumber)
-     // request.body.profession)
-     // request.body.genre,
-     // request.body.weight,
-     // request.body.height,
-     // request.body.hairColor,
-     // request.body.eyeColor,
-     // request.body.race,
-     // request.body.isRetired,
-     // request.body.nationality,
-     // request.body.oscarsNumber,
-     // request.body.profession)
+    
 
      pelicula.actors.push(actor);
 

@@ -22,17 +22,6 @@ app.get("/", function(request, response){
     response.send(respuesta);
 });
 
-// app.get("/profesionales", function(request, response){
-
-
-//     if (request.query.id){
-
-//         response.send(profesionales(request.query.id))
-//     }
-
-//     response.send(profesionales)
-   
-// });
 
 app.get("/profesionales", function(request,response){
     response.send(profesionales)
